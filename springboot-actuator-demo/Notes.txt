@@ -1,0 +1,38 @@
+Spring Boot Actuator Endpoints lets us monitor and interact with our application. 
+Spring Actuator is a Spring Boot sub-module and provides built-in endpoints that we can enable and disable for our application.
+----------------------
+Open the browser and invoke the URL http://localhost:8080/actuator. It returns the following page:
+{
+	"_links": {
+		"self": {
+			"href": "http://localhost:8080/actuator",
+			"templated": false
+		},
+		"health": {
+			"href": "http://localhost:8080/actuator/health",
+			"templated": false
+		},
+		"health-path": {
+			"href": "http://localhost:8080/actuator/health/{*path}",
+			"templated": true
+		}
+	}
+}
+
+The application runs on port 8080 by default. Once the actuator has started, we can see the list of all the endpoints exposed over HTTP.
+
+Let's invoke the health endpoint by invoking the URL http://localhost:8080/actuator/health. 
+{
+"status": "UP"
+}
+
+It denotes the status UP. It means the application is healthy and running without any interruption.
+----------------
+Spring Actuator Custom Endpoints:
+One of the great features of Spring Framework is that it’s very easy to extend. 
+We can create our own custom actuator endpoints using @Endpoint annotation on a class. 
+Then we have to use @ReadOperation, @WriteOperation, or @DeleteOperation annotations on the methods to expose them as actuator endpoint bean.
+ We can create technology-specific Endpoints using @JmxEndpoint and @WebEndpoint annotations. 
+ 
+ Refer to com.example.custom.endpoint.MyCustomEndpoints
+ -------------------

@@ -1,0 +1,8 @@
+https://www.javaguides.net/2019/04/spring-boot-thymeleaf-crud-example-tutorial.html
+https://reflectoring.io/spring-boot-internationalization/
+https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html
+
+Youtube playlist spring security
+https://www.youtube.com/watch?v=bpDO2gOWiXI&list=PLbuI9mmWSoUEIatm6_1KPaJIJfYX5L4To&index=1
+
+https://github.com/wdkeyser02/SpringBootSecurity
