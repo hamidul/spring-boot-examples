@@ -1,0 +1,9 @@
+1. Request Flow:
+AuthApplication.java->UserController.java->UserServiceImpl.java->UserRepo.java
+
+2. From controller its better to use service layer rather than directly invoking repo layer.
+
+3. The DTO only used to carry data till service layer. In service layer real entity has to be populated for database insert.
+
+4. Aim of this Auth Module:
+Develop rest API to store user information. Using these API we can achieve login functionality. 
