@@ -6,6 +6,11 @@ public class Customer {
 	String address;
 	String customerCode;
 	int phoneNumber;
+	
+	public Customer() {
+		
+	}
+	
 
 	public Customer(String name, String address, String customerCode, int phoneNumber) {
 		super();
