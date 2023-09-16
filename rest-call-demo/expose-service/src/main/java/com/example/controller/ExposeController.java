@@ -21,7 +21,13 @@ public class ExposeController {
 
 	@GetMapping("/customer")
 	private List<Customer> getAllCustomers() {
-		logger.info("Calling getAllBooks()........");
+		logger.trace("Trace........Log Message....");
+		logger.debug("Debug........Log Message....");
+		logger.info("Info........Log Message....");
+		logger.warn("Warn........Log Message....");
+		logger.error("Error........Log Message....");
+		
+		
 		List<Customer> customerList = new ArrayList<>();
 
 		Customer customer1 = new Customer("Hamidul", "Bangalore", "AMAZON", 80951854);
