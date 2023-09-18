@@ -13,7 +13,7 @@ import com.example.mongodb.model.CustomSequences;
 
 @Service
 public class SequenceGeneratorService {
-
+  
 	@Autowired
 	private MongoOperations mongoOperations; 
 
