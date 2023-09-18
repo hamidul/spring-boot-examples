@@ -17,9 +17,12 @@ public class BookServiceImpl implements BookService {
 
 	@Autowired
 	private BookRepo repo;
+	@Autowired
+	private SequenceGeneratorService generatorService;
 
 	@Override
 	public Book createBook(Book book) {
+		book.setId(generatorService.getNextSequence("customSequences"));
 		return repo.save(book);
 	}
 

@@ -10,11 +10,10 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "Book")
-
-public class Book {	
+@Document(collection = "customSequences")
+public class CustomSequences {
 	@Id
-	private int id;
-	private String bookName;
-	private String authorName;
+	private String id;
+	private int seq;
+
 }
