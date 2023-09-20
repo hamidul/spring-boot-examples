@@ -21,6 +21,10 @@ public class MyController {
 		return dataSourceUrl;
 	}
 	
+	/**
+	 * 
+	 * Alternate way to load property using Environment
+	 */
 	@GetMapping("/env")
 	public String env() {
 		System.out.println("env().........");
