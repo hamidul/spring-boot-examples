@@ -1,0 +1,25 @@
+##This is equivalent to application.properties
+
+
+server:
+  port: 8080
+
+
+spring:
+  application:
+    name: API-GATEWAY-SERVICE
+  cloud:
+    gateway:
+      routes:
+        - id: DEMO-SERVICE1
+          uri: http://localhost:8081
+          predicates:
+            - Path=/service1/**
+        - id: DEMO-SERVICE2
+          uri: http://localhost:8082
+          predicates:
+            - Path=/service2/**
+        - id: DEMO-SERVICE3
+          uri: http://localhost:8083
+          predicates:
+            - Path=/service3/**
