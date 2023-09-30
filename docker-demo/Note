@@ -1,0 +1,8 @@
+1. Create Dockerfile in the project root directory 
+2.Create a docker image like docker build -t your-docker-image-name:tag .
+Example : 
+docker build -t spring-boot-docker-image:v1 .
+3. To run the image 
+docker run -p 8080:8080 spring-boot-docker-image:v1
+
+
