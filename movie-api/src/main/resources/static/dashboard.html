@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Dashboard</title>
+</head>
+<body>
+    <h2>API Dashboard</h2>
+    <ul>
+        <li><a href="#" onclick="invokeApi('http://localhost:8080/api/movies')">Get All Movies</a></li>
+        <li><a href="#" onclick="invokeApi('http://localhost:8080/api/movies/3')">Get Movie by ID</a></li>
+        <!-- Add more API links as needed -->
+    </ul>
+
+    <script>
+        function invokeApi(apiEndpoint) {
+            fetch(apiEndpoint)
+                .then(response => response.json())
+                .then(data => console.log(data))
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
