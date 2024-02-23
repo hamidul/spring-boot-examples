@@ -1,7 +1,13 @@
 package com.example.misc.controller;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.example.misc.exception.UserAlreadyExistsException;
 import com.example.misc.exception.UserNotFoundException;
@@ -32,8 +38,8 @@ public class UserController {
         return ResponseEntity.ok("User details here");
     }
 
-    @PostMapping
-    public ResponseEntity<String> createUser(@RequestBody User user) {
+    @PostMapping("/create")
+    public ResponseEntity<User> createUser(@RequestBody User user) {
         // Your logic to create a user
         if (user.getId() == 1) {
         	//Uncomment any one of the below lines
@@ -42,6 +48,17 @@ public class UserController {
         }
 
         // User created successfully
-        return ResponseEntity.status(HttpStatus.CREATED).body("User created successfully");
+        return ResponseEntity.status(HttpStatus.CREATED).body(user);
+    }
+    
+    @GetMapping("/example")
+    public ResponseEntity<String> example() {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Custom-Header", "SomeValue");
+        headers.add("Another-Header", "AnotherValue");
+
+        String responseBody = "Response Body Content";
+
+        return new ResponseEntity<>(responseBody, headers, HttpStatus.OK);
     }
 }
