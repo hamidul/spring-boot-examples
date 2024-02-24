@@ -6,9 +6,9 @@ import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 @ConfigurationProperties(prefix = "application")
-//@PropertySource("http://localhost:8080/application/test")
 public class MyConfiguration {
 	private String dataSource;
+	private String message;
 
 	public String getDataSource() {
 		return dataSource;
@@ -18,4 +18,11 @@ public class MyConfiguration {
 		this.dataSource = dataSource;
 	}
 
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
 }
