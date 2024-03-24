@@ -1,0 +1,8 @@
+This module demonstrate how to use Autowire. Beans are registered in Spring Context
+ when spring encounter bellow annotations 
+ @Controller 
+ @Service
+ @Repository 
+ @Component 
+ Also, from 
+ @Configuration/@Bean 
