@@ -1,0 +1,42 @@
+openapi: 3.0.1
+info:
+  title: Sample API
+  description: API for demonstrating API-first approach with Spring Boot
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080/api
+paths:
+  /greeting:
+    get:
+      tags:
+        - EmployeeAPI
+      summary: Returns a greeting message
+      operationId: getGreeting
+      responses:
+        '200':
+          description: A greeting message
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Hello, World!
+  /greeting1:
+    get:
+      tags:
+        - EmployeeAPI
+      summary: Returns a greeting message
+      operationId: getGreeting1
+      responses:
+        '200':
+          description: A greeting message
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Hello, World!
