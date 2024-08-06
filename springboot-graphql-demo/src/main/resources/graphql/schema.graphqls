@@ -1,0 +1,12 @@
+# schema.graphqls
+
+type Query {
+    hello: String
+    books: [Book]
+}
+
+type Book {
+    id: ID!
+    title: String!
+    author: String!
+}
